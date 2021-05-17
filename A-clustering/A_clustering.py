@@ -75,7 +75,7 @@ def spect_clustering(L, k):
     # pointed me to np.nonzero()
     nonZinds = np.nonzero(eig_vals)
     eig_vals = eig_vals[nonZinds]
-    eig_vecs = eig_vecs[nonZinds]
+    eig_vecs = eig_vecs[:,nonZinds]
     
     # first k eigenvectors
     k_eig_vecs = eig_vecs[:, :k]
