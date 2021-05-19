@@ -97,12 +97,12 @@ def test_kmeans_sklearn_different_cols():
 def test_spectral_shape():
     # returns list of labels as long as the data
     expected = weather_std.shape[0]
-    assert len(clustering.spectral_sklearn(weather_std, 4)) == expected
+    assert len(clustering.spectral_sklearn(weather_std, 3)) == expected
 
 def test_spectral_labels():
-    # labels 0-3 for k=4 (or fewer if doesn't find all 4 clusters)
-    expected = 3
-    label_max = np.max(clustering.spectral_sklearn(weather_std, 4))
+    # labels 0-2 for k=3 (or fewer if doesn't find all 3 clusters)
+    expected = 2
+    label_max = np.max(clustering.spectral_sklearn(weather_std, 3))
     assert label_max <= expected
 
 def test_looping_kmeans_type():
