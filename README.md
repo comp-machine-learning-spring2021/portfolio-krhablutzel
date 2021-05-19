@@ -7,7 +7,7 @@ Hello and welcome to my machine learning portfolio! I'm wrapping up my sophomore
 In this porfolio, I've chosen to highlight three (four) broad areas of experience that we covered this semester:
 
 0. Data Wrangling: dimension reduction (PCA), `pandas`, `numpy`, `matplotlib`, `seaborn`
-1. Clustering: k-Means clustering, spectral clustering, benchmarking, computational complexity, `sklearn`
+1. Clustering: k-Means clustering, spectral clustering, benchmarking, `sklearn`
 2. Classification: random forests, decision trees, k-nearest neighbors (kNN), cross-validation, `sklearn`
 3. Deep Learning: neural networks, recurrent neural networks (RNNs), `tensorflow`
 

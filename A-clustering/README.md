@@ -18,5 +18,9 @@ Here in North Carolina, we often joke that we have [twelve](https://www.reddit.c
 
 These descriptions subjectively seem to fit our weather more accurately than the traditional Spring, Summer, Autumn, and Winter, but twelve is an oddly specific number. After learning about clustering algorithms, I started wondering, *what is the optimal number of clusters to describe North Carolina's weather?*
 
-
-
+explaining the coding element (think something similar to a short project write-up)
+- build own k-means implementation
+- compare to `sklearn` k-means and spectral clustering - comp complex/benchmark
+- find __ works best
+- use __ to cluster weather into 4 and 12 seasions, explore visually
+- elbowology to find optimal cluster size
