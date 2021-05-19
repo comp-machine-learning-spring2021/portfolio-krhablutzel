@@ -2,11 +2,15 @@
 ### CSC 294 Computational Machine Learning
 ### Spring 2021
 
-A readme file that both introduces you and synthesizes the elements of the portfolio in a cohesive manner. Your readme should include a brief introduction about you (perhaps in the style of a resume or short cover letter) as well as highlight the following: 
-- The skills and expertise you have in machine learning
-- The depth of your knowledge in the field
-- Your interests beyond machine learning 
+Hello and welcome to my machine learning portfolio! I'm wrapping up my sophomore year with a portfolio to showcase the skills I've picked up in my machine learning course this semester. This portfolio is a final project for the CSC294 Computational Machine Learning course at Smith College under Dr. Katherine Kinnaird, but I intend for this portfolio to be a useful reference for my future machine learning projects, as well as a preview of some of my machine learning skills for potential employers. Thoughout the project, I explore a weather dataset pulled from NOAA's [Global Surface Summary of the Day] (https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day?stations=72306013722) for the Raleigh-Durham International Airport (RDU) in order to explore various aspects of the weather in the region I call home, the Research Triangle of North Carolina.
 
-Hello and welcome to my machine learning portfolio! I'm wrapping up my sophomore year with a portfolio to showcase the skills I've picked up in my machine learning course this semester. In this porfolio, I've chosen to highlight _____, but we covered many foundational techniques this semester, including SVD/PCA, Gradient Descent, SVM, Random Forest Classifiers, kNN, k-Means, and deep learning. I've enjoyed taking a deep dive into each of these techniques, both applying them with `sklearn` and implementing many of them in Python from scratch!
+In this porfolio, I've chosen to highlight three (four) broad areas of experience that we covered this semester:
 
-As a Computer Science + Statistical and Data Sciences double major and Zollman Scholar at Smith College, I hope to continue applying many of these techniques in my future endeavors. I currently work as a software engineer in the Grubb Lab through the STRIDE research program, and I'm an incoming data engineer at Bank of America for Summer 2021. I'm excited to have all these machine learning techniques in my toolkit! Outside machine learning, my interests include data science, networks, complex systems, and cryptography.
+0. Data Wrangling: dimension reduction (PCA), `pandas`, `numpy`, `matplotlib`, `seaborn`
+1. Clustering: k-Means clustering, spectral clustering, benchmarking, computational complexity, `sklearn`
+2. Classification: random forests, decision trees, k-nearest neighbors (kNN), cross-validation, `sklearn`
+3. Deep Learning: neural networks, recurrent neural networks (RNNs), `tensorflow`
+
+We covered many foundational machine learning techniques this semester, and many of them found their way into this portfolio. The only major techniques we covered that are missing from this portfolio are Singular Value Decomposition (SVD), Gradient Descent, Support Vector Machines (SVM), perceptrons, and Convolutional Neural Networks (CNNs). I've enjoyed taking a deep dive into all of these techniques this semester, both applying them with `sklearn`/`tensorflow` and implementing many of them in Python from scratch!
+
+As a Computer Science + Statistical and Data Sciences double major and Zollman Scholar at Smith College ('23), I hope to continue applying many of these machine learning techniques in my future endeavors. I currently work as a software engineer in the Grubb Lab through the STRIDE research program, and I'm an incoming data engineer at Bank of America for Summer 2021. I'm excited to have all these machine learning techniques in my toolkit for future projects! Outside machine learning, my interests include data science, networks, cryptography, and complex systems, as well as running, theater, and 16th century British politics.
