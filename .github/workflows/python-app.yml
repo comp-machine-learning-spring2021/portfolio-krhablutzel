@@ -27,14 +27,14 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Clustering with pytest
       run: |
-        cd clustering
         pytest
+      working-directory: clustering
     - name: Classifier with pytest
       run: |
-        cd ../classifier
         pytest
+      working-directory: classifier
     - name: Deep learning with pytest
       run: |
-        cd ../deep-learning
         pytest
+      working-directory: deep-learning
       
