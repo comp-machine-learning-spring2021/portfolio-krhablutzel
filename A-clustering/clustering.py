@@ -9,15 +9,6 @@ from sklearn.cluster import KMeans
 from sklearn.cluster import SpectralClustering 
 from scipy.spatial import distance
 
-# plotting
-import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
-import calendar
-
-# benchmarking
-import timeit
-import time
-
 # helper functions
 # adapted from original code in lab 6
 def standardize(data):

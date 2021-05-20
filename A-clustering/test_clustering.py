@@ -1,14 +1,20 @@
-# tests adapted from Homework 2
 import pytest
 import pandas as pd
 import numpy as np
 import clustering
+
+# ML tools
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans 
+from sklearn.cluster import SpectralClustering 
+from scipy.spatial import distance
 
 # import data
 weather_pd = pd.read_csv('../data/weather.csv', index_col = 0)
 weather = weather_pd.drop(['YEAR', 'DAY', 'STP', 'GUST'], axis=1).to_numpy()
 weather_std = clustering.standardize(weather)
 
+# tests adapted from Homeworks 2 and 3
 def test_standardize_type():
     # returns np dataframe
     assert isinstance(clustering.standardize(weather), np.ndarray)
