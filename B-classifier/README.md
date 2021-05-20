@@ -1,5 +1,5 @@
 # Predicting NC's Existing Seasons
-### Supervised Learning with Assorted Classifiers
+### Supervised Learning with Multiple Classifiers
 
 When I was thinking about North Carolina's seasons for the [clustering project](../clustering/README.md), I started wondering how well our traditional seasonal boundaries fit North Carolina's weather. Seasons officially start and end with solstices and equinoxes, but the weather rarely seems to shift between seasons anywhere near these dates. In my part of NC, summer seems to last from May until early October, and winter only visits briefly between January and February—far off from the official seasonal boundaries in late March, June, September, and December. Thus, in this project, I decided to explore two questions: *What classifier model is best for predicting the season of a day based on its weather characteristics? How accurate can this model get?* 
 

@@ -1,5 +1,5 @@
 # Predicting NC's Existing Seasons
-### Supervised Learning with Assorted Classifiers
+### Supervised Learning with Multiple Classifiers
 
 import pandas as pd
 import numpy as np
@@ -160,5 +160,3 @@ def main():
     # compute validation error
     val_preds = dt.predict(weather_valid.iloc[:,:-1])
     val_error = classification_mse(val_preds, weather_valid.iloc[:,-1])
-    
-    

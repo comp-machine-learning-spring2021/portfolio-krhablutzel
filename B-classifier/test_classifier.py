@@ -28,12 +28,12 @@ def test_standardize_type():
     
 def test_standardize_size():
     # returns dataframe of the same size
-    expected = weather_np.shape
+    expected = weather_pd.shape
     assert expected == classifier.standardize(weather_pd.to_numpy()).shape
     
 def test_standardize_mean_centered():
     # column mean is near 0
-    expected = weather_np.shape[1]
+    expected = weather_pd.shape[1]
     near0 = np.isclose(np.mean(classifier.standardize(weather_pd.to_numpy()), axis=0), 0)
     assert expected == sum(near0)
 
@@ -45,7 +45,7 @@ def test_divide_data_shape():
     n_90 = n - n_10
     
     # divide data
-    valid, tt = project2.divide_data(weather_pd)
+    valid, tt = classifier.divide_data(weather_pd)
     
     # check sizes
     val_shape = (valid.shape[0] == n_10) and (valid.shape[1] == weather_pd.shape[1])
@@ -55,40 +55,46 @@ def test_divide_data_shape():
     
 def test_divide_data_type():
     # pandas dataframes
-    valid, tt = project2.divide_data(weather_pd)
+    valid, tt = classifier.divide_data(weather_pd)
     assert isinstance(valid, pd.core.frame.DataFrame) and isinstance(tt, pd.core.frame.DataFrame)
     
-def test_classification_mse():
+def test_classification_mse_type():
+    # expected type
+    class_truth = pd.DataFrame([1, 1, 0, 0])
+    pred_class = pd.DataFrame([0, 1, 0, 1])
+    assert isinstance(classifier.classification_mse(class_truth, pred_class)[0], float)
+    
+def test_classification_mse_vals():
     # correct mse
     expected = 0.5
     class_truth = pd.DataFrame([1, 1, 0, 0])
     pred_class = pd.DataFrame([0, 1, 0, 1])
-    assert project2.classification_mse(class_truth, pred_class)[0] == expected
+    assert classifier.classification_mse(class_truth, pred_class)[0] == expected
     
 def test_cross_validation_type():
     # returns float
-    out = project2.cross_validation(weather_pd, 'tree', 10)
+    out = classifier.cross_validation(weather_pd, 'tree', 10)
     assert isinstance(out, float)
     
 def test_cross_validation_methods():
     # runs successfully for all three methods
-    tree = project2.cross_validation(weather_pd, 'tree', 10)
-    kNN = project2.cross_validation(weather_pd, 'neighbor', 10)
-    forest = project2.cross_validation(weather_pd, 'forest', 10)
+    tree = classifier.cross_validation(weather_pd, 'tree', 10)
+    kNN = classifier.cross_validation(weather_pd, 'neighbor', 10)
+    forest = classifier.cross_validation(weather_pd, 'forest', 10)
     assert isinstance(tree, float) and isinstance(kNN, float) and isinstance(forest, float)
     
 def test_all_cv_errors_shape():
     # returns expected number of combinations and cols
-    out = classifier.all_cv_errors(weather_pd ['neighbor', 'tree', 'forest'])
-    expected = (3, 3)
+    out = classifier.all_cv_errors(weather_pd, ['neighbor', 'tree', 'forest'])
+    expected = (3, 2)
     assert out.shape == expected
     
 def test_all_cv_errors_type():
     # returns expected types in each column
-    out = classifier.all_cv_errors(weather_pd ['neighbor', 'tree', 'forest'])
-    assert isinstance(out[0,0], list) and isinstance(out[0,1], str) and isinstance(out[0,2], float)
+    out = classifier.all_cv_errors(weather_pd, ['neighbor', 'tree', 'forest'])
+    assert isinstance(out[0,0], str) and isinstance(out[0,1], float)
     
 def test_all_cv_errors_col3_sorted():
     # second column is sorted ascending
-    out = classifier.all_cv_errors(weather_pd ['neighbor', 'tree', 'forest'])
+    out = classifier.all_cv_errors(weather_pd, ['neighbor', 'tree', 'forest'])
     assert out[0,1] <= out[1,1] and out[1,1] <= out[2,1]
