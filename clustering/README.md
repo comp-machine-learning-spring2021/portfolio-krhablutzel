@@ -35,3 +35,7 @@ See `clustering.ipynb` for a complete walkthrough of this project. This notebook
 - [r/Charlotte on NC's 12 seasons](https://www.reddit.com/r/Charlotte/comments/fuw1bo/the_12_season_of_north_carolina/)
 - [@DurhamNC on Twitter on NC's 12 seasons, January 2020](https://twitter.com/durhamnc/status/1217887940417814529?lang=en)
 - [@DurhamNC on Twitter on NC's 12 seasons, September 2020](https://twitter.com/durhamnc/status/1302644512951619584?lang=en)
+
+#### Proof of Local Tests Passing
+
+![Pytest Tests](local-tests.png)

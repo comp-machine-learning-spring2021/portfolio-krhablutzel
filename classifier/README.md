@@ -12,3 +12,7 @@ See `classifier.ipynb` for a complete walkthrough of this project. This notebook
 - [StackOverflow elements not in index](https://stackoverflow.com/questions/27824075/accessing-numpy-array-elements-not-in-a-given-index-list)
 - [StackOverflow shuffle dataframe rows](https://stackoverflow.com/questions/29576430/shuffle-dataframe-rows)
 - [pandas concat DataFrames helpfile](https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html)
+
+#### Proof of Local Tests Passing
+
+![Pytest Tests](local-tests.png)
