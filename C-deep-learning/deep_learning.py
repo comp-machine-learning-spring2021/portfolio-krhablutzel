@@ -5,8 +5,8 @@ import tensorflow as tf
 from sklearn.utils import shuffle
 
 # workaround for MacOS/jupyter notebook bug w/ tensorflow
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
+#import os
+#os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 # adapted from original code in project 2
 def divide_data(weather):
@@ -71,11 +71,12 @@ def build_model_RNN(num_output_vals, embedding_dim, rnn_units, batch_size):
     ])
     return model
 
-def restore_model():
+def restore_model(num_output_vals, embedding_dim, rnn_units):
     '''restore model from save'''
+    checkpoint_dir = './training-checkpoints'
     tf.train.latest_checkpoint(checkpoint_dir)
 
-    modelRNN = build_model(num_output_vals, embedding_dim, rnn_units, batch_size=1)
+    modelRNN = build_model_RNN(num_output_vals, embedding_dim, rnn_units, batch_size=1)
     modelRNN.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
     modelRNN.build(tf.TensorShape([1, None]))
     
@@ -202,7 +203,7 @@ def part2():
     # history = modelRNN.fit(dataset, epochs=EPOCHS, callbacks=[checkpoint_callback])
 
     # restore model from save
-    modelRNN = restore_model()
+    modelRNN = restore_model(num_output_vals, embedding_dim, rnn_units)
 
     # form predictions for next week
     example_week = np.array([[0, 0, 0, 0, 0, 0, 0]])
