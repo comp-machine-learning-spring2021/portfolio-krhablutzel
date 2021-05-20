@@ -14,5 +14,4 @@ See `classifier.ipynb` for a complete walkthrough of this project. This notebook
 - [pandas concat DataFrames helpfile](https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html)
 
 #### Proof of Local Tests Passing
-
 ![Pytest Tests](local-tests.png)

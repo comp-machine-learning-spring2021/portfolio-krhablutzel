@@ -37,5 +37,4 @@ See `clustering.ipynb` for a complete walkthrough of this project. This notebook
 - [@DurhamNC on Twitter on NC's 12 seasons, September 2020](https://twitter.com/durhamnc/status/1302644512951619584?lang=en)
 
 #### Proof of Local Tests Passing
-
 ![Pytest Tests](local-tests.png)

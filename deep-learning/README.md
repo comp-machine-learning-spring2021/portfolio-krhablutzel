@@ -26,5 +26,4 @@ See `deep-learning.ipynb` for a complete walkthrough of this project.
 - [tensorflow `Sequential` documentation](https://www.tensorflow.org/api_docs/python/tf/keras/Sequential)
 
 #### Proof of Local Tests Passing
-
 ![Pytest Tests](local-tests.png)
