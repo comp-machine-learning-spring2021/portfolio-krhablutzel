@@ -2,14 +2,14 @@
 ### CSC 294 Computational Machine Learning
 ### Spring 2021
 
-Hello and welcome to my machine learning portfolio! I'm wrapping up my sophomore year with a portfolio to showcase the skills I've picked up in my machine learning course this semester. This portfolio is a final project for the CSC294 Computational Machine Learning course at Smith College under Dr. Katherine Kinnaird, but I intend for this portfolio to be a useful reference for my future machine learning projects, as well as a preview of some of my machine learning skills for potential employers. Thoughout the project, I explore a weather dataset pulled from NOAA's [Global Surface Summary of the Day] (https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day?stations=72306013722) for the Raleigh-Durham International Airport (RDU) in order to explore various aspects of the weather in the region I call home, the Research Triangle of North Carolina.
+Hello and welcome to my machine learning portfolio! I'm wrapping up my sophomore year with a portfolio to showcase the skills I've picked up in my machine learning course this semester. This portfolio is a final project for the CSC294 Computational Machine Learning course at Smith College under Dr. Katherine Kinnaird, but I intend for this portfolio to be a useful reference for my future machine learning projects, as well as a preview of some of my machine learning skills for potential employers. Thoughout the project, I explore a weather dataset pulled from NOAA's [Global Surface Summary of the Day](https://www.ncei.noaa.gov/access/search/data-search/global-summary-of-the-day?stations=72306013722) for the Raleigh-Durham International Airport (RDU) in order to explore various aspects of the weather in the region I call home, the Research Triangle of North Carolina.
 
 In this porfolio, I've chosen to highlight three (four) broad areas of experience that we covered this semester:
 
-0. Data Wrangling: dimension reduction (PCA), `pandas`, `numpy`, `matplotlib`, `seaborn`
-1. Clustering: k-Means clustering, spectral clustering, benchmarking, `sklearn`
-2. Classification: random forests, decision trees, k-nearest neighbors (kNN), cross-validation, `sklearn`
-3. Deep Learning: neural networks, recurrent neural networks (RNNs), `tensorflow`
+0. [Data Wrangling](data/README.md): dimension reduction (PCA), `pandas`, `numpy`, `matplotlib`, `seaborn`
+1. [Clustering](clustering/README.md): k-Means clustering, spectral clustering, benchmarking, `sklearn`
+2. [Classification](classifier/README.md): random forests, decision trees, k-nearest neighbors (kNN), cross-validation, `sklearn`
+3. [Deep Learning](deep-learning/README.md): neural networks, recurrent neural networks (RNNs), `tensorflow`
 
 We covered many foundational machine learning techniques this semester, and many of them found their way into this portfolio. The only major techniques we covered that are missing from this portfolio are Singular Value Decomposition (SVD), Gradient Descent, Support Vector Machines (SVM), perceptrons, and Convolutional Neural Networks (CNNs). I've enjoyed taking a deep dive into all of these techniques this semester, both applying them with `sklearn`/`tensorflow` and implementing many of them in Python from scratch!
 
