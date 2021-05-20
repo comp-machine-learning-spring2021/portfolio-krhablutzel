@@ -6,10 +6,10 @@ Hello and welcome to my machine learning portfolio! I'm wrapping up my sophomore
 
 In this porfolio, I've chosen to highlight three (four) broad areas of experience that we covered this semester:
 
-0. [Data Wrangling](data/README.md): dimension reduction (PCA), `pandas`, `numpy`, `matplotlib`, `seaborn`
-1. [Clustering](clustering/README.md): k-Means clustering, spectral clustering, benchmarking, `sklearn`
-2. [Classification](classifier/README.md): random forests, decision trees, k-nearest neighbors (kNN), cross-validation, `sklearn`
-3. [Deep Learning](deep-learning/README.md): neural networks, recurrent neural networks (RNNs), `tensorflow`
+0. [Data Wrangling](data): dimension reduction (PCA), `pandas`, `numpy`, `matplotlib`, `seaborn`
+1. [Clustering](clustering): k-Means clustering, spectral clustering, benchmarking, `sklearn`
+2. [Classification](classifier): random forests, decision trees, k-nearest neighbors (kNN), cross-validation, `sklearn`
+3. [Deep Learning](deep-learning): neural networks, recurrent neural networks (RNNs), `tensorflow`
 
 We covered many foundational machine learning techniques this semester, and many of them found their way into this portfolio. The only major techniques we covered that are missing from this portfolio are Singular Value Decomposition (SVD), Gradient Descent, Support Vector Machines (SVM), perceptrons, and Convolutional Neural Networks (CNNs). I've enjoyed taking a deep dive into all of these techniques this semester, both applying them with `sklearn`/`tensorflow` and implementing many of them in Python from scratch!
 

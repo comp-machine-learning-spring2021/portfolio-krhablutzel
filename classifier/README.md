@@ -5,7 +5,7 @@ When I was thinking about North Carolina's seasons for the [clustering project](
 
 In this notebook, I go through the test, train, and validation stages of building a classifier model. I use 10-fold cross validation to test random forest, decision tree, and k-nearest neighbors classifiers, and I find that a decision tree classifier is the best model for predicting the season of a day of weather in NC based on weather characteristics such as temperature, pressure, and precipitation. Then, I build this decision tree classifier and validate the model on the remaining 10% of the data, which I had previously withheld from testing and training, achieving a validation error of 12.4%. Considering that North Carolina's weather doesn't feel like it fits the official seasons, this seems to be a reasonably accurate model.
 
-See `classifier.ipynb` for a complete walkthrough of this project. This notebook is a complement to the [clustering project](../clustering/README.md), where I throw away the traditional seasonal boundaries and cluster NC's weather into a new set of seasons.
+See `classifier.ipynb` for a complete walkthrough of this project. This notebook is a complement to the [clustering project](../clustering), where I throw away the traditional seasonal boundaries and cluster NC's weather into a new set of seasons.
 
 #### References Consulted
 - [np.random.choice documentation](https://numpy.org/doc/stable/reference/random/generated/numpy.random.choice.html)
