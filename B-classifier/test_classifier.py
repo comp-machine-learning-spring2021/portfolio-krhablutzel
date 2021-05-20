@@ -1,5 +1,5 @@
 import pytest
-import B_classifier
+import classifier
 
 def placeholder():
     var = 2 + 2

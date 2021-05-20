@@ -1,5 +1,5 @@
 import pytest
-import C_deep_learning
+import deep_learning
 
 def placeholder():
     var = 2 + 2
