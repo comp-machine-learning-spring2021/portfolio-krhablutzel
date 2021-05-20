@@ -8,3 +8,6 @@ pytest
 numpy
 pandas
 scikit-learn
+tensorflow
+itertools
+os
