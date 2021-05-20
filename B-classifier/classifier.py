@@ -28,25 +28,25 @@ def standardize(data):
     return data_std
 
 # adapted from original code in project 2
-def divide_data(rent):
+def divide_data(weather):
     '''divide dataset into two sets: 90% test/train and 10% validation'''
-    n = rent.shape[0]
+    n = weather.shape[0]
     
     # take out 10% of the data for validation
     # https://numpy.org/doc/stable/reference/random/generated/numpy.random.choice.html
     ind_valid = np.random.choice(n, size = n // 10, replace = False)
-    rent_valid = rent.iloc[ind_valid]
+    weather_valid = weather.iloc[ind_valid]
 
     # take the other 90% for building the model
     # https://stackoverflow.com/questions/27824075/accessing-numpy-array-elements-not-in-a-given-index-list
     ind_tt = [x for x in range(n) if x not in ind_valid] # not in index
-    rent_tt = rent.iloc[ind_tt]
+    weather_tt = weather.iloc[ind_tt]
 
     # shuffle data for test/train so no patterns in folds
     # https://stackoverflow.com/questions/29576430/shuffle-dataframe-rows
-    rent_tt = shuffle(rent_tt)
+    weather_tt = shuffle(weather_tt)
 
-    return rent_valid, rent_tt
+    return weather_valid, weather_tt
 
 def classification_mse(class_truth, pred_class):
     '''compute classification mse'''
@@ -111,13 +111,13 @@ def cross_validation(data, method, k):
     
     return cross_val_error
 
-def all_cv_errors(rent_tt, methods):
+def all_cv_errors(weather_tt, methods):
     '''get cross-validation error for all possible models'''
     cv_errors = []     
     # test each possible model type
     for method in methods:
         # compute cross-validation error
-        cv_err = cross_validation(rent_tt, method, 10)
+        cv_err = cross_validation(weather_tt, method, 10)
 
         # store errors
         cv_errors.append([method, cv_err])
