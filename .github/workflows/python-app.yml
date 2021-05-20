@@ -25,6 +25,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with pytest
+    - name: Clustering with pytest
       run: |
+        cd clustering
         pytest
+    - name: Classifier with pytest
+      run: |
+        cd ../classifier
+        pytest
+    - name: Deep learning with pytest
+      run: |
+        cd ../deep-learning
+        pytest
+      
